@@ -1,7 +1,10 @@
-﻿namespace RentalAgencyApi.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RentalAgencyApi.Models
 {
     public class Cliente
     {
+        [Key]
         public long Id { get; set; }
         public string? Nome { get; set; }
         public string? CPF { get; set; }
