@@ -11,23 +11,23 @@ namespace RentalAgencyApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class VeiculoesController : ControllerBase
+    public class VeiculosController : ControllerBase
     {
         private readonly ApplicationContext _context;
 
-        public VeiculoesController(ApplicationContext context)
+        public VeiculosController(ApplicationContext context)
         {
             _context = context;
         }
 
-        // GET: api/Veiculoes
+        // GET: api/Veiculos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Veiculo>>> GetVeiculo()
         {
             return await _context.Veiculo.ToListAsync();
         }
 
-        // GET: api/Veiculoes/5
+        // GET: api/Veiculos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Veiculo>> GetVeiculo(long id)
         {
@@ -41,7 +41,7 @@ namespace RentalAgencyApi.Controllers
             return veiculo;
         }
 
-        // PUT: api/Veiculoes/5
+        // PUT: api/Veiculos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVeiculo(long id, Veiculo veiculo)
@@ -72,7 +72,7 @@ namespace RentalAgencyApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Veiculoes
+        // POST: api/Veiculos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Veiculo>> PostVeiculo(Veiculo veiculo)
@@ -83,7 +83,7 @@ namespace RentalAgencyApi.Controllers
             return CreatedAtAction("GetVeiculo", new { id = veiculo.Id }, veiculo);
         }
 
-        // DELETE: api/Veiculoes/5
+        // DELETE: api/Veiculos/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVeiculo(long id)
         {

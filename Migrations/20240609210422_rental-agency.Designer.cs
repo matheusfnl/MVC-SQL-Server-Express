@@ -12,7 +12,7 @@ using RentalAgencyApi.Models;
 namespace RentalAgencyApi.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20240609205905_rental-agency")]
+    [Migration("20240609210422_rental-agency")]
     partial class rentalagency
     {
         /// <inheritdoc />
