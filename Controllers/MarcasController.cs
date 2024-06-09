@@ -13,9 +13,9 @@ namespace RentalAgencyApi.Controllers
     [ApiController]
     public class MarcasController : ControllerBase
     {
-        private readonly MarcaContext _context;
+        private readonly ApplicationContext _context;
 
-        public MarcasController(MarcaContext context)
+        public MarcasController(ApplicationContext context)
         {
             _context = context;
         }

@@ -7,13 +7,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.AddDbContext<ClienteContext>(opt =>
+builder.Services.AddDbContext<ApplicationContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddDbContext<MarcaContext>(opt =>
+builder.Services.AddDbContext<ApplicationContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddDbContext<ReservaContext>(opt =>
+builder.Services.AddDbContext<ApplicationContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddDbContext<VeiculoContext>(opt =>
+builder.Services.AddDbContext<ApplicationContext>(opt =>
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Learn more about configuring Swagger/OpenAPI

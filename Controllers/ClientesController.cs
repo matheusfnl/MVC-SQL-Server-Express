@@ -13,9 +13,9 @@ namespace RentalAgencyApi.Controllers
     [ApiController]
     public class ClientesController : ControllerBase
     {
-        private readonly ClienteContext _context;
+        private readonly ApplicationContext _context;
 
-        public ClientesController(ClienteContext context)
+        public ClientesController(ApplicationContext context)
         {
             _context = context;
         }

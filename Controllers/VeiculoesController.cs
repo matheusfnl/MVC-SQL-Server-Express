@@ -13,9 +13,9 @@ namespace RentalAgencyApi.Controllers
     [ApiController]
     public class VeiculoesController : ControllerBase
     {
-        private readonly VeiculoContext _context;
+        private readonly ApplicationContext _context;
 
-        public VeiculoesController(VeiculoContext context)
+        public VeiculoesController(ApplicationContext context)
         {
             _context = context;
         }
